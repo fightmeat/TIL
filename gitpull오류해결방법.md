@@ -21,6 +21,7 @@ git pull
 그래서 나는 USERS에 있는 TIL파일을 아에 삭제해버리고
 다시
 ```
+cd
 git clone 깃주소
 ```
 해버리고
