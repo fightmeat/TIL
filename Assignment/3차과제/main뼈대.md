@@ -27,3 +27,60 @@ if __name__ == "__main__":
     main()
 
 ```
+```python
+import sqlite3
+
+class EnglishVocabulary:
+    def __init__(self, db_path='vocabulary.db'):
+        self.conn = sqlite3.connect(db_path)
+        self.cursor = self.conn.cursor()
+        self._create_table()
+        
+    def _create_table(self):
+        self.cursor.execute('''
+            CREATE TABLE IF NOT EXISTS vocabulary (
+                id INTEGER PRIMARY KEY,
+                word TEXT NOT NULL UNIQUE,
+                meaning TEXT NOT NULL
+            )
+        ''')
+        self.conn.commit()
+        
+    def add_word(self, word, meaning):
+        try:
+            self.cursor.execute('''
+                INSERT INTO vocabulary (word, meaning) VALUES (?, ?)
+            ''', (word, meaning))
+            self.conn.commit()
+        except sqlite3.IntegrityError:
+            print(f"'{word}' is already in the vocabulary.")
+            
+    def get_meaning(self, word):
+        self.cursor.execute('''
+            SELECT meaning FROM vocabulary WHERE word = ?
+        ''', (word,))
+        result = self.cursor.fetchone()
+        return result[0] if result else None
+    
+    def delete_word(self, word):
+        self.cursor.execute('''
+            DELETE FROM vocabulary WHERE word = ?
+        ''', (word,))
+        self.conn.commit()
+    
+    def list_words(self):
+        self.cursor.execute('SELECT word, meaning FROM vocabulary')
+        return self.cursor.fetchall()
+    
+    def close(self):
+        self.conn.close()
+
+# 사용 예시
+vocab = EnglishVocabulary()
+vocab.add_word('apple', '사과')
+print(vocab.get_meaning('apple'))
+vocab.delete_word('apple')
+print(vocab.list_words())
+vocab.close()
+```
+
