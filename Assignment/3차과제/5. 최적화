@@ -1,4 +1,5 @@
 ### 오류확인
+
 import random
 
 def add_word():
