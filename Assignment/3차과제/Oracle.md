@@ -1,4 +1,4 @@
-# 일단 이렇게 짜질 텐데 실행은 아직 안해봤지용
+# 어휴 힘들어 낼 해야겠다
 
 ```python
 import cx_Oracle
@@ -10,19 +10,26 @@ DB_CONNECTION_STRING = "scott/1234@localhost:1521/xe"
 def setup_database():
     conn = cx_Oracle.connect(DB_CONNECTION_STRING)
     cursor = conn.cursor()
-    cursor.execute("""
-    CREATE TABLE IF NOT EXISTS vocabulary (
-        word VARCHAR2(45) PRIMARY KEY,
-        meanings VARCHAR2(1000)
-    )
-    """)
+    try:
+        cursor.execute("""
+        CREATE TABLE vocabulary (
+            word VARCHAR2(45) PRIMARY KEY,
+            meanings VARCHAR2(1000)
+        )
+        """)
+    except cx_Oracle.DatabaseError as e:
+        error, = e.args
+        if error.code == 955:  # Table already exists error
+            pass
+        else:
+            raise  # Reraise the exception if it's a different error
+    conn.commit()
+    conn.close()
 
 # 코드 구성은 아까 sqlite와 똑같아요
 # 영어 사전에서 제일 긴 단어는 Pneumonoultramicroscopicsilicovolcanoconiosis로 45글자 그래서 글씨수제한을 45개로 걸고 뜻은 걍 1000자까지 적었어요
 # NVARCHAR2를 쓰면 영어말고 막 아랍어 이런거도 쓸수있데요 국제 문자 집합을 위한 데이터 타입이래요 아무튼 그렇다고요 단어니까 키고 문자는 걍 쓰면되죠
 
-    conn.commit()
-    conn.close()
 
 def load_data():
     conn = cx_Oracle.connect(DB_CONNECTION_STRING)
