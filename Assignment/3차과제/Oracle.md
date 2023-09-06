@@ -1,4 +1,7 @@
-import sqlite3
+# 일단 이렇게 짜질 텐데 실행은 아직 안해봤지용
+
+```python
+import cx_Oracle
 import random
 
 DB_NAME = "vocabulary.db"
@@ -172,3 +175,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+```
