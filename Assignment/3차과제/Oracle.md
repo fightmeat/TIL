@@ -1,9 +1,8 @@
 ## SQL Developer 켜서 englishman에 들어간다.
 
 ```sql
-SELECT * FROM voca;
-# 하거나
-DESC voca;
+DESC vocabulary;
+SELECT * FROM vocabulary;
 # 하면 볼수있다.
 ```
 <img src="https://github.com/fightmeat/photos/blob/b1e55141cf78066b31ec5a7cdb3640a5623b58b3/scott.png" width="600" height="400"/>
