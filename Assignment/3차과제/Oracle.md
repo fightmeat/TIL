@@ -5,7 +5,7 @@ DESC vocabulary;
 SELECT * FROM vocabulary;
 # 하면 볼수있다.
 ```
-<img src="https://github.com/fightmeat/photos/blob/b1e55141cf78066b31ec5a7cdb3640a5623b58b3/scott.png" width="600" height="400"/>
+<img src="https://github.com/fightmeat/photos/blob/60f75aaacc04ebfc80fadf5c16c8e2440d7769d2/sqldeveloper.png" width="600" height="400"/>
 
 ## 요기는 오라클로 짠 코드다 더 편한거같은디?
 
