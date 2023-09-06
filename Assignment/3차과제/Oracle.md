@@ -1,6 +1,11 @@
-## 이거 왜 되는거지?....
+## SQL Developer 켜서 englishman 에서 
 
-
+```sql
+SELECT * FROM voca;
+# 하거나
+DESC voca;
+# 하면 볼수있다.
+```
 
 ```python
 import cx_Oracle
