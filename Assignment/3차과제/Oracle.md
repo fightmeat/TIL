@@ -4,8 +4,8 @@
 import cx_Oracle
 import random
 
-# Oracle 연결 문자열: "scott/1234@localhost:1521:xe"
-DB_CONNECTION_STRING = "scott/1234@localhost:1521:xe"
+# Oracle 연결 문자열: "scott/1234@localhost:1521/xe"
+DB_CONNECTION_STRING = "scott/1234@localhost:1521/xe"
 
 def setup_database():
     conn = cx_Oracle.connect(DB_CONNECTION_STRING)
