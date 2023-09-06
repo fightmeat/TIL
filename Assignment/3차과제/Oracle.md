@@ -4,22 +4,28 @@
 import cx_Oracle
 import random
 
-DB_NAME = "vocabulary.db"
+# Oracle 연결 문자열: "scott/1234@localhost:1521:xe"
+DB_CONNECTION_STRING = "scott/1234@localhost:1521:xe"
 
 def setup_database():
-    conn = sqlite3.connect(DB_NAME)
+    conn = cx_Oracle.connect(DB_CONNECTION_STRING)
     cursor = conn.cursor()
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS vocabulary (
-        word TEXT PRIMARY KEY,
-        meanings TEXT
+        word VARCHAR2(45) PRIMARY KEY,
+        meanings VARCHAR2(1000)
     )
     """)
+
+# 코드 구성은 아까 sqlite와 똑같아요
+# 영어 사전에서 제일 긴 단어는 Pneumonoultramicroscopicsilicovolcanoconiosis로 45글자 그래서 글씨수제한을 45개로 걸고 뜻은 걍 1000자까지 적었어요
+# NVARCHAR2를 쓰면 영어말고 막 아랍어 이런거도 쓸수있데요 국제 문자 집합을 위한 데이터 타입이래요 아무튼 그렇다고요 단어니까 키고 문자는 걍 쓰면되죠
+
     conn.commit()
     conn.close()
 
 def load_data():
-    conn = sqlite3.connect(DB_NAME)
+    conn = cx_Oracle.connect(DB_CONNECTION_STRING)
     cursor = conn.cursor()
     cursor.execute("SELECT word, meanings FROM vocabulary")
     data = {row[0]: row[1].split(', ') for row in cursor.fetchall()}
@@ -27,12 +33,25 @@ def load_data():
     return data
 
 def save_data(vocabulary):
-    conn = sqlite3.connect(DB_NAME)
+
+    conn = cx_Oracle.connect(DB_CONNECTION_STRING)
     cursor = conn.cursor()
+
+# 근데 아까는 여기서 전용문법을 썼는데 오라클은 없어서 이렇게 길게 써야해요
+# 대충 Oracle 데이터베이스의 vocabulary 테이블에 단어를 추가하거나 업데이트하는데
+# 주어진 단어가 이미 테이블에 있으면 뜻을 업데이트하고, 없으면 새로운 단어와 뜻을 삽입합니다.
+# MERGE 명령문을 쓰는 작업이에요
 
     for word, meanings in vocabulary.items():
         meanings_str = ', '.join(meanings)
-        cursor.execute("INSERT OR REPLACE INTO vocabulary (word, meanings) VALUES (?, ?)", (word, meanings_str))
+        cursor.execute(
+            "MERGE INTO vocabulary USING DUAL ON (word = :word) "
+            "WHEN MATCHED THEN UPDATE SET meanings = :meanings "
+            "WHEN NOT MATCHED THEN INSERT (word, meanings) "
+            "VALUES (:word, :meanings)", 
+            {'word': word, 'meanings': meanings_str}
+        )
+
 
     conn.commit()
     conn.close()
