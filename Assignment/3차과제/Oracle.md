@@ -1,4 +1,4 @@
-## SQL Developer 켜서 englishman 에서 
+## SQL Developer 켜서 englishman에 들어간다.
 
 ```sql
 SELECT * FROM voca;
@@ -6,6 +6,7 @@ SELECT * FROM voca;
 DESC voca;
 # 하면 볼수있다.
 ```
+## 요기는 오라클로 짠 코드다 더 편한거같은디?
 
 ```python
 import cx_Oracle
