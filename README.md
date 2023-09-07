@@ -3,6 +3,8 @@
 
 <img src="https://github.com/fightmeat/photos/blob/004795327daba4a5de4a11b59fe85f9b10ec0fbd/Feynman.png">
 
+<img src="https://github.com/fightmeat/photos/blob/004795327daba4a5de4a11b59fe85f9b10ec0fbd/Feynman.png" width="900" height="900"/>
+
 1. 이해하고 싶은 개념 선택
 2. 강의용 스크립트 적기
 3. 개념학습
