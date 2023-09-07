@@ -1,5 +1,5 @@
 # Today I Learned
-## Feynman Learning Technique
+## Feynman Learning Technique(파인만 학습법)
 1. 이해하고 싶은 개념 선택
 2. 강의용 스크립트 적기
 3. 개념학습
