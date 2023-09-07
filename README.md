@@ -1,5 +1,11 @@
 # Today I Learned
 ## Feynman Learning Technique(파인만 학습법)
+<img src="https://github.com/fightmeat/photos/blob/004795327daba4a5de4a11b59fe85f9b10ec0fbd/Feynman.png" width="400" height="300"/>
+
+
+
+<img src="https://github.com/fightmeat/photos/blob/004795327daba4a5de4a11b59fe85f9b10ec0fbd/Feynman.png">
+
 1. 이해하고 싶은 개념 선택
 2. 강의용 스크립트 적기
 3. 개념학습
@@ -15,4 +21,3 @@
 
 배운과정을 스토리화 해서 스스로에게 들려준다. 남에게 들려줘도 된다.
 그러면서 비유를 최대한 활용 더 단순화해라
-<img src="" width="400" height="300"/>
