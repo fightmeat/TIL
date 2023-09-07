@@ -1,8 +1,5 @@
 # Today I Learned
 ## Feynman Learning Technique(파인만 학습법)
-<img src="https://github.com/fightmeat/photos/blob/004795327daba4a5de4a11b59fe85f9b10ec0fbd/Feynman.png" width="400" height="300"/>
-
-
 
 <img src="https://github.com/fightmeat/photos/blob/004795327daba4a5de4a11b59fe85f9b10ec0fbd/Feynman.png">
 
