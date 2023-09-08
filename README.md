@@ -1,7 +1,7 @@
 # Today I Learned
 ## Feynman Learning Technique(파인만 학습법)
 
-<img src="https://github.com/fightmeat/photos/blob/5b1e7c388a2755ae38ab0eb87243bd43337e6d4f/Feynman.png"><br>
+<img src="https://github.com/fightmeat/photos/blob/2a9c1c68dabd2cb880e259801cb9f56f24ede641/Feynman.svg"><br>
 
 1. 이해하고 싶은 학습주제나 개념을 선택
 2. 공부하기
