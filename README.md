@@ -11,3 +11,12 @@
 5. 학습한 내용을 지속적으로 피드백을 받아서 복습하는데 복잡한 개념을 단순화하고 요약하고 스토리화해서   
 6. 최종적으로 저장합니다.
 7. 피드백을 통해서 점검하고 안되면 3번으로 돌아가기-->
+
+# Flask vs Django
+- 몇가지의 기능은 Flask 방대한 기능은 Django
+- IDE : Pycharm, atom, Vscode, sublinetext... 많다
+- Anaconda : 포함(python), numpy, pandas, matplotlib...
+
+# Pycharm 다운로드 및 설치
+- 2022.3.3 버전 다운로드
+https://www.jetbrains.com/ko-kr/pycharm/download/other.html
