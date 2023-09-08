@@ -32,7 +32,14 @@ controller : 제어하는 역할
 
 MTV
 ```
-model
-template
-view
+model : crud 명령어를 안쓰고 직접접근하지않고 db만 건들인다.
+orm 스타일 이라고 한다 .db에 직접 접근하지 않고 create 명령어 ... 그런거 이용하지 않고 class화 함수를 이용해서 데이터를 처리한다.
+그럴 때를 **모델**이라는것을 사용한다.
+template : 보여주는거 html파일존재 css존재 javascript존재 혹은 이미지들이 들어가는게 템플릿
+view : 요청에 해당하는 거 보여주는거
 ```
+
+# CSS
+- 꾸미는 역할
+
+# Javascript , jquery
