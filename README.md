@@ -20,3 +20,19 @@
 # Pycharm 다운로드 및 설치
 - 2022.3.3 버전 다운로드
 https://www.jetbrains.com/ko-kr/pycharm/download/other.html
+
+# MVC  VS  MTV
+
+MVC
+```
+model : ntt는 데이터만 담는  데이터베이스에 전달하는 모델로 사용되는 클래스
+view : 보여주는 역할
+controller : 제어하는 역할
+```
+
+MTV
+```
+model
+template
+view
+```
