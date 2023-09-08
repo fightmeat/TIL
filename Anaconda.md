@@ -37,6 +37,7 @@
   # 파이썬 3.x버전의 가상환경 생성
     conda create -n <가상환경이름> python=3.x
     conda create --name <가상환경이름> python=3.x
+    ex)python=3.9 이런식으로 붙혀서 써야한다.
 
   # 현재 활성화된 가상환경의 패키지 삭제
     conda remove <패키지이름>
