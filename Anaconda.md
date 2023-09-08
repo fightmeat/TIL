@@ -1,5 +1,4 @@
-# Anaconda 관련 명령어 리스트
-1. 버전
+
   # 아나콘다 버전 확인
     conda -V
     conda --version
