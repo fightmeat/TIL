@@ -33,7 +33,15 @@ view : 요청에 해당하는 거 보여주는거
 - Y 선택
 - Set-ExecutionPolicy RemoteSigned
 - A
-
-###  teminal 누르고
+- 하면 해결된다.
+  
+## 이후에  teminal 누르고
 - django-admin startproject config .
 - 여기서 config 띄우고 .을 찍어야 한다. 안그러면 config 안쪽에 config가 생긴다.
+
+## 주소록 application
+- 슈퍼 유저 : 관리자 계정
+```
+python manage.py makemigrations # 변경된 내용을 수집하는 명령
+python manage.py migrate # DB에 반영(commit)
+```
