@@ -60,3 +60,15 @@ python manage.py startapp address
 # LANGUAGE_CODE를 ko 로
 # TIME_ZOME을 Asia/Seoul 로
 # ctrl + s 누르면 저장
+```
+## 주소록
+```
+Class Address(models.Model):
+    idx = models.AutoField(primary_key = True) # 오토필드는 자동으로 입력을 받아서 채우기
+    name = models.CharField(max_length=50, black=True, null=True)
+    tel = models.CharField(max_length=50, black=True, null=True)
+    email = models.CharField(max_length=50, black=True, null=True)
+    address = models.CharField(max_length=500, black=True, null=True)
+```
+- 이러면 db에 자동으로 address_address 테이블이 자동 생성된다.
+  
