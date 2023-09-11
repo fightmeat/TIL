@@ -41,6 +41,7 @@ view : 요청에 해당하는 거 보여주는거
 
 ## 주소록 application
 - 슈퍼 유저 : 관리자 계정
+- 새로운 테이블을 생성하려면 models.py파일과 admin.py 즉, 2개의 파일을 수정해야한다.
 ```
 # 그 다음부터는
 python manage.py makemigrations # 변경된 내용을 수집하는 명령
