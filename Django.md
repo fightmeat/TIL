@@ -83,4 +83,4 @@ Class Address(models.Model):
     address = models.CharField(max_length=500, black=True, null=True)
 ```
 - 이러면 db에 자동으로 address_address 테이블이 자동 생성된다.
-  
+- 페이지에 들어가서 /admin을 쳐주면 화면으로 들어가진다.
