@@ -27,9 +27,9 @@ template : 보여주는거 html파일존재 css존재 javascript존재 혹은 �
 view : 요청에 해당하는 거 보여주는거
 ```
 
-import 에러가 뜨면 
-window powershell을 관리자 권한으로 실행
-get-help Set-ExecutionPolicy
-Y 선택
-Set-ExecutionPolicy RemoteSigned
-A
+- import 에러가 뜨면 
+- window powershell을 관리자 권한으로 실행
+- get-help Set-ExecutionPolicy
+- Y 선택
+- Set-ExecutionPolicy RemoteSigned
+- A
