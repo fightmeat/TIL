@@ -44,6 +44,15 @@ view : 요청에 해당하는 거 보여주는거
 - 새로운 테이블을 생성하려면 models.py파일과 admin.py 즉, 2개의 파일을 수정해야한다.
 - model.py : 테이블 정의
 - admin.py : model.py에 등록한 테이블이 admin 사이트에 보이도록 처리한다.
+  ```
+  from address.models import Address
+  class AdressAdmin(admin.ModelAdmin):
+  # 관리자 화면에서 표시할 내용을 튜플로 등록
+      list_display = ('name','tel','email','address')
+  # idx는 등록하는것이 아니다 자동등록된다. 오라클로 치면 시퀀스라 중복처리 안되서 primary키로 동작
+  # 두개의 클래스를 등록하고 연결하는 작업
+  admin.site.register(Address, AdressAdmin)
+  ```
 ```
 # 그 다음부터는
 python manage.py makemigrations # 변경된 내용을 수집하는 명령
