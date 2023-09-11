@@ -33,3 +33,7 @@ view : 요청에 해당하는 거 보여주는거
 - Y 선택
 - Set-ExecutionPolicy RemoteSigned
 - A
+
+###  teminal 누르고
+- django-admin startproject config .
+- 여기서 config 띄우고 .을 찍어야 한다. 안그러면 config 안쪽에 config가 생긴다.
