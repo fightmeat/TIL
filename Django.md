@@ -52,6 +52,11 @@ python manage.py createsuperuser
 python manage.py runserver localhost:80
 # 그리고 http://localhost:80/admin/ 에 들어가면 로그인창이 뜬다.
 # 터미널에 ctrl + c를 누르면 서버 닫기
-
 ```
-
+## 어플리케이션 생성
+```
+python manage.py startapp address
+# config에서 settings.py에 INSTALLED_APPS에 address 추가
+# LANGUAGE_CODE를 ko 로
+# TIME_ZOME을 Asia/Seoul 로
+# ctrl + s 누르면 저장
