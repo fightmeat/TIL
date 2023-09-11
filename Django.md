@@ -42,6 +42,16 @@ view : 요청에 해당하는 거 보여주는거
 ## 주소록 application
 - 슈퍼 유저 : 관리자 계정
 ```
+# 그 다음부터는
 python manage.py makemigrations # 변경된 내용을 수집하는 명령
+# 처음 실행할 때만
 python manage.py migrate # DB에 반영(commit)
+# 슈퍼유저 생성
+python manage.py createsuperuser
+# 아이디(admin)와 이메일주소(생략) 그리고 비밀번호(1234) 너무짧아서 y입력 
+python manage.py runserver localhost:80
+# 그리고 http://localhost:80/admin/ 에 들어가면 로그인창이 뜬다.
+# 터미널에 ctrl + c를 누르면 서버 닫기
+
 ```
+
