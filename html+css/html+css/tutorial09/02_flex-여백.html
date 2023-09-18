@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        display: flex;
+        height: 100vh;
+        width: 1920px;
+      }
+
+      .container .nav {
+        flex-shrink: 0;
+        width: 300px;
+        background-color: red;
+      }
+
+      .container .content {
+        flex-grow: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+      플렉스박스의 유연한 레이아웃을 가능하게 하는 가장 중요한 속성 2가지
+
+      1. flex-grow
+      자동으로 width 값을 늘려준다.
+
+      2. flex-shrink
+      자동으로 width가 축소되지 않도록 넣어주는 옵션
+
+    -->
+
+    <div class="container">
+      <div class="nav">메뉴</div>
+      <div class="content">내용</div>
+    </div>
+  </body>
+</html>

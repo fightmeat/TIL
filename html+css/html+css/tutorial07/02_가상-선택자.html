@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        color: red;
+      }
+
+      .box:hover {
+        color: blue;
+      }
+
+      .input1 {
+        border: 1px solid red;
+      }
+
+      .input1:focus {
+        border: 1px solid blue;
+      }
+
+      .input2 {
+        border: 1px solid green;
+      }
+
+      .input2:disabled {
+        border: 1px solid black;
+      }
+
+      input[type="checkbox"]:checked ~ label {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+      가상 선택자
+      사용자 동작에 반응하는 선택자로 다른 선택자 뒤에 붙여서 활용한다.
+
+      :hover 마우스 포인터가 올라갔을시 적용
+      :focus 초점이 맞춰졌을때 적용
+
+      :disabled input 요소가 disabled 상태인 경우
+      :checked checkbox, radio가 checked 상태인 경우
+
+      :link
+      :visited
+      :active
+      :target
+
+    -->
+    <div class="box">마우스를 올려봐</div>
+    <input class="input1" type="text" />
+    <br />
+    <input class="input2" type="text" />
+    <input class="input2" type="text" disabled />
+
+    <input type="checkbox" id="check" />
+    <label for="check">선택</label>
+  </body>
+</html>

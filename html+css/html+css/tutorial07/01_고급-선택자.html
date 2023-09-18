@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      section > p {
+        color: red;
+      }
+
+      main h1 ~ p {
+        color: blue;
+      }
+
+      a[href] {
+        color: red;
+      }
+
+      input[type="password"] {
+        border: 1px solid red;
+      }
+
+      input[readonly] {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+      고급선택자?
+      선택자의 범위를 지정할수 있다!
+      부모와 자식간의 연결관계에 따라 스타일을 조정할수 있다.
+
+      1. 하위 선택자
+      부모 요소에 포함된 모든 하위 요소를 선택하여 적용한다.
+
+      상위요소 하위요소 {}
+
+      2. 자식 선택자
+      하위 선택자와 다르게 바로 다음 자식 요소를 선택하도록 한다.
+
+      부모요소 > 자식요소 {}
+
+      3. 인접 형제 선택자
+      형제 요소중 첫번째 동생 요소만 선택한다.
+
+      요소1 + 요소2 {}
+
+      4. 형제 선택자
+      인접 선택자와 달리 모든 동생 요소를 선택한다.
+
+      요소1 ~ 요소2 {}
+
+      5. 태그의 속성 선택자 
+      태그의 특정 속성이 있는 요소를 선택한다.
+
+      태그[속성] {}
+
+      태그[속성='값'] {}
+
+    -->
+    <section>
+      <p>적용 여부</p>
+      <div>
+        <p>적용 될까?</p>
+      </div>
+    </section>
+    <p>적용?</p>
+
+    <main>
+      <h1>h1태그</h1>
+      <p>첫번째 p</p>
+      <p>두번째 p</p>
+      <p>세번째 p</p>
+      <h2>h2태그</h2>
+      <p>네번째 p</p>
+    </main>
+
+    <a>링크</a>
+    <a href="www.naver.com">네이버</a>
+
+    <input type="text" />
+    <input type="password" />
+
+    <input type="text" readonly />
+  </body>
+</html>

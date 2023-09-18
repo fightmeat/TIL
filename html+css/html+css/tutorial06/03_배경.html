@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+      }
+
+      .bg1 {
+        background: red;
+      }
+
+      .bg2 {
+        border: 1px solid black;
+        width: 900px;
+        height: 900px;
+        background-image: url("https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA2MTlfOCAg%2FMDAxNjg3MTg1ODIyNjg3.rFWYfsMby-i98nYBV3tENe4NaXuw59TZhTsNQSETmi8g.T97koNqmB_BcJkAbesBKhim3hZjAdd-4dMhPKbbLQD4g.JPEG.legolegovvip%2F1687185816822.jpg&type=sc960_832");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+      background
+      요소의 배경 색, 이미지등을 설정하는 속성
+
+      색상
+      { background-color: <색상> }
+      { background: <색상> }
+
+
+      이미지
+      { background-image: url(<이미지주소>) }
+      { background-repeat: repeat | repeat-x | repeat-y | no-repeat }
+      { background-size: auto | contain | cover |  }
+      { background-position: <가로축위치> <세로축위치> } left | center | right | % | px
+
+      contain vs cover
+      contain은 이미지의 여백에 맞춰 확대 처리한다.
+      cover의 경우 가로/세로의 비어있는 영역이 없도록 최대한 확대하여 처리한다.
+
+      축약형
+      { background: [<색상>] url(<이미지주소>) <가로축위치> <세로축위치> / <사이즈> <반복여부> }
+
+      => 순서대로 작성할때 필요없는 속성은 생략 가능하다.
+
+    -->
+    <div class="bg1">배경1</div>
+    <div class="bg2"></div>
+  </body>
+</html>

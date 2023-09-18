@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>01_폼-태그</title>
+</head>
+<body>
+    <!--
+        폼이란?
+        로그인, 회원가입, 신청서, 주문등 사용자의 의견이나 정보를 담아 전달하는 형태 / 양식
+        백엔드로 입력 내용을 전달하여 처리한다.
+
+        폼항목
+        글자(텍스트)
+        체크 버튼
+        동그란 버튼 -> 여러개중에 하나만 선택 / 라디오 버튼
+        길다란 그냥 버튼
+        날짜 선택
+        파일 업로드
+
+        <form>~</form>
+        - 폼의 영역을 알려주는 태그
+        - method 속성 > 어떤 형식으로 보낼 것인가? 생략하면 GET
+        - action 속성 > 어디로 보낼 것인가?
+
+        폼 전송 방식
+        GET
+        - 주소표시줄에 사용자가 입력한 내용을 그대로 보낸다. > 쿼리스트링
+        - 주소창의 길이를 넘어서 데이터를 보낼 수 없다.
+        - 주소에 내용이 노출되기 때문에 보안 이슈가 있다.
+
+        POST
+        - 별도의 body 영역에 데이터를 담아 보낸다.
+        - 입력한 내용에 대한 길이 제한도 없고 내용이 노출되지 않는다.
+    -->
+    <form action="action.html" method="get">
+        아이디: <input name="id" type="text" />
+        <br/>
+        비밀번호: <input name="password" type="password" />
+        <button type="submit">전송</button>
+    </form>
+</body>
+</html>

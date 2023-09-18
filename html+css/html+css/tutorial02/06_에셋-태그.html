@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>06_에셋-태그</title>
+</head>
+<body>
+    <!--
+        에셋이란?
+        이미지, 동영상, 오디오, 다른 페이지등 웹페이지에 삽입할수 있는 외부 콘텐츠들..
+
+        1. 이미지
+        <img src="이미지 파일 경로" alt="대체용 텍스트"/>
+
+        대체용 텍스트란 이미지를 불러오지 못한경우 글자로 해당 이미지에 대한 설명을 표현한다.
+
+        절대경로
+        - 주소창의 첫번째 슬래쉬가 시작되는 부분을 기점으로 해당 파일을 불러온다.
+        - /로 시작한다.
+
+        상대경로
+        - 현재 파일을 위치를 기준으로 해당 파일을 불러온다
+        - .. 한칸 위로 . 현재위치
+
+    -->
+    <!-- 외부 주소 -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/IVE_Yujin_at_Music_Bank.jpg/250px-IVE_Yujin_at_Music_Bank.jpg" alt="안유진"/>
+
+    <!-- 상대경로 -->
+    <img src="./assets/jang.jpg" alt="장원영"/>
+
+    <!-- 절대경로 -->
+    <img src="/edu/tutorial02/assets/han.jpg" alt="한지민"/>
+
+    <!-- 대체용 텍스트 -->
+    <img src="asdowqd.png" alt="파일이 없으면 표기된다."/>
+
+<!--
+    2. 동영상, 오디오
+    <video src="동영상 파일 경로" />
+    <audio src="오디오 파일 경로" />
+
+    섬세한 컨트롤이 필요한 경우가 많기에 대부분 자바스크립트와 함께 사용 된다.
+-->
+
+<!--
+    3. 아이플레임
+    현재 웹화면속에 다른 웹페이지 화면을 보여주는 경우
+    대표적으로 유튜브 같은 영상 콘텐츠를 업로드 하는 경우 iframe를 활용한다.
+
+    <iframe src="주소" width="가로길이" height="세로길이" .../>
+
+-->
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/bfslaJu2-RA?list=RDbfslaJu2-RA" title="[DJ티비씨] 김윤아 (Kim Yuna) - 스물다섯, 스물하나 ♬ #비긴어게인2 #DJ티비씨" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</body>
+</html>

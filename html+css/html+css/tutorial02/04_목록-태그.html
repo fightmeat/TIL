@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>04_목록-태그</title>
+</head>
+<body>
+    <!--
+        여러 요소를 일렬로 나열한 목록이나 명단을 의미할때 쓰는 태그.
+        3종류가 있다.
+        - 순서가 있는 목록(ordered list)
+        - 순서가 없는 목록(unordered list)
+        - 정의 목록(definition list) -> 실무에서 사용하지 않는다!
+
+        1. ol  -> 자주 사용하지는 않는다.
+        - 순서가 있는 목록 (책 개요 같은 부분)
+        - 숫자(기본값), 영대문자, 영소문자, 로마대문자, 로마소문자 등으로 표기된다.
+        - CSS의 list-style 속성으로 변경하거나 제거할수 있다.
+        - decimal(기본값), upper-alpha, lower-alpha ...
+
+        <ol>
+            <li>~</li>
+            <li>~</li>
+        </ol>
+
+        2. ul  -> 가장 많이 사용된다.
+        - 순서가 없는 목록
+        - 검정색 작은 원(기본값), 흰색 작은 원, 사각형
+        - CSS의 list-style-type 속성으로 변경하거나 제거할수 있다.
+        - disc, circle, square
+
+        <ul>
+            <li>~</li>
+            <li>~</li>
+        </ul>
+
+    -->
+
+    <div id="ol">
+        <ol style="list-style: upper-alpha;">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+        </ol>
+    </div>
+    <div id="ul">
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+        </ul>
+    </div>
+
+</body>
+</html>
