@@ -26,11 +26,23 @@ View : MVC의 Controller 역할
 ```
 # Project 개발과정(순서)
 - Web Project : myweb
+- pycharm 실행후 생성(반드시 관리자 권한으로 실행해야 한다.)
   + Django Project : config
+  + pycharm의 터미널에서 실행
+  + django-admin  startproject config .
+  + 여기서 config 띄우고 .을 찍어야 한다. 안그러면 config 안쪽에 config가 생긴다.
+  + 자동으로 생성되는 manage.py : 유틸리티 파일
+  + python manage.py makemigrations : 변경내용 수집
+  + python manage.py migrate : 수집된 내용을 DB에 반영(commit)
+  + python manage.py createsuperuser
+  + id(admin), password(1234), email(생략) 등록
+  + 관리자 사이트 생성 : superuser - 슈퍼유저 생성
+  + 현재까지 작업을 웹에서 확인하는 작업 : 웹서버 실행 후 확인
+  + python manage.py runserver localhost:80
+  + localhost 대신 127.0.0.1을 써도 된다. 충돌시에는 포트번호를 바꿔준다. 
      * App Project :
-        - 주소록을 관리할 목적으로 구현하는 App : address
+     * 주소록을 관리할 목적으로 구현하는 App : address
   
-
 # import 에러가 뜨면 
 - window powershell을 관리자 권한으로 실행
 - get-help Set-ExecutionPolicy
@@ -38,10 +50,6 @@ View : MVC의 Controller 역할
 - Set-ExecutionPolicy RemoteSigned
 - A
 - 하면 해결된다.
-  
-## 이후에  teminal 누르고
-- django-admin startproject config .
-- 여기서 config 띄우고 .을 찍어야 한다. 안그러면 config 안쪽에 config가 생긴다.
 
 ## 주소록 application
 - 슈퍼 유저 : 관리자 계정
@@ -58,10 +66,10 @@ View : MVC의 Controller 역할
   admin.site.register(Address, AdressAdmin)
   ```
 ```
-# 그 다음부터는
-python manage.py makemigrations # 변경된 내용을 수집하는 명령
 # 처음 실행할 때만
 python manage.py migrate # DB에 반영(commit)
+# 그 다음부터는
+python manage.py makemigrations # 변경된 내용을 수집하는 명령
 # 슈퍼유저 생성
 python manage.py createsuperuser
 # 아이디(admin)와 이메일주소(생략) 그리고 비밀번호(1234) 너무짧아서 y입력 
