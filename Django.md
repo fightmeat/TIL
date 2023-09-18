@@ -43,7 +43,26 @@ View : MVC의 Controller 역할
      * App Project :
      * 주소록을 관리할 목적으로 구현하는 App : address
      * python manage.py startapp address
-  
+     * address/models.py
+     * 주소록을 관리할 테이블을  클래스로 정의하는 파일
+     * 테이블을 새로 만ㄴ들려면 models.py와 admin.py 2개의 파일 수정
+     * ORM(오브젝트 릴레이션 매핑)기법을 사용 : 테이블을 클래스로 관리하는 작업
+     * 하나의 테이블은 하나의 클래스로 정의하고
+     * 테이블의 컬럼은 클래스의 변수로 매핑하고
+     * 테이블의 클래스는 django.db.models.Model 클래스를 상속받아 구현
+     * 변수의 자료형도 django에서 미리 정의한 자료형을 사용한다.
+     * 내부적으로 DB안에 app명-클래스명, address_address라는 테이블
+  ```
+  admin.py에
+  from address.models import Address
+
+  class AddrestAdmin(admin.ModelAdmin):
+    # 관리자 사이트에 표시할 내용을 기술(등록)
+    # 등록할 필드목록을 튜플로 지정
+          list_display = ('name','tel','email','address')
+
+  admin.site.register(Address, AddressAdmin)
+  ```
 # import 에러가 뜨면 
 - window powershell을 관리자 권한으로 실행
 - get-help Set-ExecutionPolicy
@@ -88,7 +107,7 @@ python manage.py startapp address
 ```
 ## 주소록
 ```
-Class Address(models.Model):
+class Address(models.Model):
     idx = models.AutoField(primary_key = True) # 오토필드는 자동으로 입력을 받아서 채우기
     name = models.CharField(max_length=50, black=True, null=True)
     tel = models.CharField(max_length=50, black=True, null=True)
@@ -97,3 +116,4 @@ Class Address(models.Model):
 ```
 - 이러면 db에 자동으로 address_address 테이블이 자동 생성된다.
 - 페이지에 들어가서 /admin을 쳐주면 화면으로 들어가진다.
+
