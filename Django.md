@@ -112,4 +112,19 @@ class Address(models.Model):
 ```
 - 이러면 db에 자동으로 address_address 테이블이 자동 생성된다.
 - 페이지에 들어가서 /admin을 쳐주면 화면으로 들어가진다.
+## urls.py
+client vs server
+- client : 정보를 요청하는 쪽
+- server : 정보를 제공(응답)하는 쪽
+- 서로 간의 통신을 하는 프로토콜은 http로 주소 통신한다.
 
+- 쿠키(cookie) vs 세션(session)
+- cookie : 클라이언트 pc에 저장
+- session : 서버에 저장
+
+- POST vs GET : 전송방식
+- GET방식 : URL에 데이터가 노출, 데이터 길이에 제한, 보안에 취약
+- POST 방식 : 노출되지 않음(암호화처리), 보안에 강함, django 주로 사용
+  
+- URL : 프로토콜 + 도메인(호스트) + 경로 + 쿼리
+- http://www.naver.com/in3.html?a=100 # GET 방식
