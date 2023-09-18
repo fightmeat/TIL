@@ -56,7 +56,7 @@ View : MVC의 Controller 역할
   admin.py에
   from address.models import Address
 
-  class AddrestAdmin(admin.ModelAdmin):
+  class AddressAdmin(admin.ModelAdmin):
     # 관리자 사이트에 표시할 내용을 기술(등록)
     # 등록할 필드목록을 튜플로 지정
           list_display = ('name','tel','email','address')
