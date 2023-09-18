@@ -7,25 +7,29 @@
 - 2022.3.3 버전 다운로드
 https://www.jetbrains.com/ko-kr/pycharm/download/other.html
 
-# MVC  VS  MTV
+# 개발형식 MVC  VS  MTV
 
-MVC
+MVC pattern (이전의 웹을 개발하는 일련의 절차 또는 과정)
 ```
-model : ntt는 데이터만 담는  데이터베이스에 전달하는 모델로 사용되는 클래스
-view : 보여주는 역할
-controller : 제어하는 역할
+Model : 데이터를 관리할 목적으로 생성하는 객체
+View : 사용자에게 보여주는 목적으로 구현하는 객체
+Controller : Model과 View를 제어할 목적으로 구현하는 객체
 ```
 
-MTV
+MTV pattern (python 기반의 웹 개발)
 ```
-model : crud 명령어를 안쓰고 직접접근하지않고 db만 건들인다. 우리는 그걸 orm 스타일 이라고 한다.
+Model : DB를 활용하지만 crud 명령어를 안쓰고 직접접근하지않는다. 우리는 그걸 orm 스타일 이라고 한다.
         db에 직접 접근하지 않고 create 명령어 delete... 그런거 이용하지 않고 class화 함수를 이용해서 데이터를 처리할 때
         우리는 **모델**이라는것을 사용한다.
-
-template : 보여주는거 html파일존재 css존재 javascript존재 혹은 이미지들이 들어가는게 템플릿
-
-view : 요청에 해당하는 거 보여주는거
+Template : MVC의 View역할(HTML, CSS, Javascript...)
+View : MVC의 Controller 역할
 ```
+# Project 개발과정(순서)
+- Web Project : myweb
+  + Django Project : config
+     * App Project :
+        - 주소록을 관리할 목적으로 구현하는 App : address
+  
 
 # import 에러가 뜨면 
 - window powershell을 관리자 권한으로 실행
