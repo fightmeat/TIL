@@ -20,7 +20,7 @@ MTV pattern (python 기반의 웹 개발)
 ```
 Model : DB를 활용하지만 crud 명령어를 안쓰고 직접접근하지않는다. 우리는 그걸 orm 스타일 이라고 한다.
         db에 직접 접근하지 않고 create 명령어 delete... 그런거 이용하지 않고 class화 함수를 이용해서 데이터를 처리할 때
-        우리는 **모델**이라는것을 사용한다.
+        우리는 모델을 사용한다.
 Template : MVC의 View역할(HTML, CSS, Javascript...)
 View : MVC의 Controller 역할
 ```
