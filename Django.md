@@ -52,17 +52,13 @@ View : MVC의 Controller 역할
      * 테이블의 클래스는 django.db.models.Model 클래스를 상속받아 구현
      * 변수의 자료형도 django에서 미리 정의한 자료형을 사용한다.
      * 내부적으로 DB안에 app명-클래스명, address_address라는 테이블
-  ```
-  admin.py에
-  from address.models import Address
+ ```
+class AddressAdmin(admin.ModelAdmin):
+    # 관리자 화면에 표시할 내용을 튜플로 작성
+    list_display = ('name','tel','email','address')
 
-  class AddressAdmin(admin.ModelAdmin):
-    # 관리자 사이트에 표시할 내용을 기술(등록)
-    # 등록할 필드목록을 튜플로 지정
-          list_display = ('name','tel','email','address')
-
-  admin.site.register(Address, AddressAdmin)
-  ```
+admin.site.register(Address, AddressAdmin)
+ ```
 # import 에러가 뜨면 
 - window powershell을 관리자 권한으로 실행
 - get-help Set-ExecutionPolicy
