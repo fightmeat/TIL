@@ -42,6 +42,7 @@ View : MVC의 Controller 역할
   + localhost 대신 127.0.0.1을 써도 된다. 충돌시에는 포트번호를 바꿔준다. 
      * App Project :
      * 주소록을 관리할 목적으로 구현하는 App : address
+     * python manage.py startapp address
   
 # import 에러가 뜨면 
 - window powershell을 관리자 권한으로 실행
