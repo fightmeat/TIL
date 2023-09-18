@@ -128,3 +128,4 @@ client vs server
   
 - URL : 프로토콜 + 도메인(호스트) + 경로 + 쿼리
 - http://www.naver.com/in3.html?a=100 # GET 방식
+<src = "https://github.com/fightmeat/photos/blob/a13373e9afb3c2854ec0ada52b78660f00383212/django.drawio.svg">
