@@ -1,6 +1,0 @@
-write write write
-파이썬 파일 입출력 포스팅
-ab123456abcdefg
-BlockDMask
-python
-blog

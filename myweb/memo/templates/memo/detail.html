@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+      function update(){
+        document.form1.action="update_memo";
+        document.form1.submit();
+      }
+
+      function del(){
+        document.form1.action="delete_memo";
+        document.form1.submit();
+      }
+
+    </script>
+</head>
+<body>
+<!--  {'row':row}-->
+<h2>방명록 편집</h2>
+<form name="form1" method="post">
+  {% csrf_token %}
+  <table border="1">
+    <tr>
+      <td>작성자</td>
+      <td><input type="text" name="writer" value="{{row.writer}}"></td>
+    </tr>
+    <tr>
+      <td>작성일</td>
+      <td>{{row.post_date}}</td>
+    </tr>
+    <tr>
+      <td>방명록</td>
+      <td><input type="text" name="memo" value="{{row.memo}}"></td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center">
+        <input type="hidden" name="idx" value="{{row.idx}}">
+        <input type="button" value="수정" onclick="update()">
+        <input type="button" value="삭제" onclick="del()">
+      </td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

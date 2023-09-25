@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--Cross Site Request Forgery 사이트 간의 요청 위조-->
+<body>
+<h2>주소록</h2>
+<form action ="insert" method="post">
+  {% csrf_token %}
+  이름 : <input type="text" name = "name"><br>
+  전화 : <input type="text" name = "tel"><br>
+  메일 : <input type="text" name = "email"><br>
+  주소 : <input type="text" name = "address"><br>
+  <input type = "submit" value="확인">
+<!--  <button value="확인" onclick=""></button>-->
+  <input type = "reset" value = "취소">
+</form>
+</body>
+</html>

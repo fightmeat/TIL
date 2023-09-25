@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h2>방 명 록</h2>
+<form method="post" action="insert_memo">
+  {% csrf_token %}
+  작성자 : <input type="text" name="writer">
+  방명록 : <input type="text" name = "memo">
+  <input type="submit" value="등록">
+</form>
+<hr>
+<table border="1">
+  <tr>
+    <th>번호</th>
+    <th>작성자</th>
+    <th>방명록</th>
+    <th>작성일</th>
+  </tr>
+  <!--{'memoList':memoList, 'memoCount':len(memoList)}-->
+  {% for row in memoList %}
+  <tr>
+    <td>{{row.idx}}</td>
+    <td>{{row.writer}}</td>
+    <td> <a href="detail_memo?idx={{row.idx}}"> {{row.memo}} </a> </td>
+    <td>{{row.post_date|date:'Y-m-d G:i:s'}}</td>
+  </tr>
+  {% endfor %}
+</table>
+</body>
+</html>

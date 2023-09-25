@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+      function update(){
+        document.form1.action="update";
+        document.form1.submit();
+      }
+
+      function del(){
+        document.form1.action="delete";
+        document.form1.submit();
+      }
+    </script>
+</head>
+<body>
+<!--{'addr':addr}-->
+<h2> 주소록 편집 및 상세보기</h2>
+<form name = "form1" method="post">
+  {% csrf_token %}
+  <table border="1">
+    <tr>
+      <td>이름</td>
+      <td><input type = "text" name="name" value="{{addr.name}}"></td>
+    </tr>
+    <tr>
+      <td>전화</td>
+      <td><input type = "text" name="tel" value="{{addr.tel}}"></td>
+    </tr>
+    <tr>
+      <td>메일</td>
+      <td><input type = "text" name="email" value="{{addr.email}}"></td>
+    </tr>
+    <tr>
+      <td>주소</td>
+      <td><input type = "text" name="address" value="{{addr.address}}"></td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center">
+        <input type="hidden" name="idx" value="{{addr.idx}}">
+        <input type="button" value="수정" onclick="update()">
+        <input type="button" value="삭제" onclick="del()">
+      </td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>
