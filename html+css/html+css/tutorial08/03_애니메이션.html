@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .notif-btn {
+        width: 80px;
+        height: 80px;
+        padding: 5px;
+        background: #c30f42;
+        cursor: pointer;
+        outline: 0;
+        border: none;
+
+        border-radius: 100%;
+        transition: all 0.3s ease;
+        animation: pulse 1.6s infinite;
+      }
+
+      .notif-btn:hover,
+      .notif-btn:active {
+        background: rgba(215, 17, 73, 1);
+        animation: none;
+      }
+
+      .notif-btn svg {
+        fill: #fff;
+      }
+
+      /* Animations */
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(215, 17, 73, 0.85);
+        }
+
+        70% {
+          box-shadow: 0 0 0 2em rgba(215, 17, 73, 0);
+        }
+
+        100% {
+          box-shadow: 0 0 0 0 rgba(215, 17, 73, 0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+      트랜지션보다 더 디테일한 애니메이션 설정을 하는 경우 활용
+
+      @keyframes 애니메이션이 바뀌는 지점을 설정
+      animation-delay 애니메이션의 시작 시간 지정
+      animation-direction 애니메이션의 방향을 설정
+      animation-duration 애니메이션 실행 시간 초단위 (s)
+      animation-iteration-count 애니메이션의 반복 횟수
+      animation-name @keyframes로 설정한 애니메이션의 이름
+      animation-timing-function 키프레임의 전환 형태
+      animation 위의 모든 애니메이션 속성을 한번에 설정
+
+      { animation: <name> <duration> <timing-function> <delay> <iteration-count> <direction> }
+      -> 중간에 속성을 사용하지 않는다면 생략 가능
+
+      codepen -> 프론트엔드 개발자의 playground
+      button css animation
+
+    -->
+    <button class="notif-btn">퇴근<br />하자</button>
+  </body>
+</html>

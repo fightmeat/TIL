@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 2000px;
+        position: relative;
+      }
+
+      .sticky {
+        position: sticky;
+        top: 10px;
+        background: red;
+      }
+
+      .fixed {
+        position: fixed;
+        top: 95px;
+        background: skyblue;
+      }
+
+      div {
+        width: 50px;
+        height: 50px;
+        background: red;
+        margin: 10px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+      sticky는 부모의 영역 스크롤에 따라 움직인다.
+      fixed는 부모의 영역에서 무조건 고정된다.
+    -->
+    sticky와 fixed<br /><br />
+    <div class="sticky">sticky</div>
+    <div class="fixed">fixed</div>
+  </body>
+</html>

@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>05_테이블-태그</title>
+</head>
+<body>
+    <!--
+        테이블은 데이터를 보기좋게 표형태로 보여주는 태그이다.
+        행(row), 열(column), 셀(cell)로 이루어진다.
+
+        태그 종류
+
+        1. 표를 만드는 태그
+        <table>~</table>
+        - 테이블의 시작과 끝을 정하는 태그
+
+        <caption>~</caption>
+        - 표의 제목을 나타내는 태그
+
+        2. 행과 셀을 만드는 태그
+        <tr>~</tr>
+        - table row
+        - 테이블의 행(한줄)을 의미한다.
+
+        <td>~</td>
+        - table data
+        - 테이블의 셀(한칸)을 의미한다.
+
+        <th>~</th>
+        - table header
+        - 테이블의 제목셀(행의 머리)을 나타낸다.
+        - 주로 첫번째 tr에 사용한다.
+    -->
+    <table border="1">
+        <caption>테이블 제목</caption>
+        <tr>
+            <td>1행 1열</td>
+            <td>1행 2열</td>
+        </tr>
+        <tr>
+            <td>2행 1열</td>
+            <td>2행 2열</td>
+        </tr>
+    </table>
+    <!--
+        3. 표의 구조를 지정하는 태그
+        <thead>~</thead>
+        - 테이블의 제목 영역
+
+        <tbody></tbody>
+        - 테이블의 본문 영역
+
+        <tfoot>~</tfoot>
+        - 테이블 하단 영역
+    -->
+    <h3>메뉴판</h3>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>상품명</th>
+                <th>재고</th>
+                <th>가격</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>먹태깡</td>
+                <td>10개</td>
+                <td>10,000</td>
+            </tr>
+            <tr>
+                <td>새우깡</td>
+                <td>50개</td>
+                <td>2,000</td>
+            </tr>
+            <tr>
+                <td>홈런볼</td>
+                <td>20개</td>
+                <td>1,000</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">먹태깡 1인 1개 구매 가능.</td>
+            </tr>
+        </tfoot>
+    </table>
+    <!--
+        4. 행이나 열을 합치는 속성
+        행을 합치려면 -> rowspan
+        열을 합치려면 -> colspan
+
+        사용법
+        <td rowspan="합칠 셀의 개수">내용</td>
+        <td colspan="합칠 셀의 개수">내용</td>
+    -->
+    <table border="1">
+        <caption>행 합치기</caption>
+        <tr>
+            <td rowspan="2">
+                1행 1열 + 2행 1열
+            </td>
+            <td>1행 2열</td>
+        </tr>
+        <tr>
+            <td>2행 2열</td>
+        </tr>
+    </table>
+
+    <table border="1">
+        <caption>열 합치기</caption>
+        <tr>
+            <td>1행 1열</td>
+            <td>1행 2열</td>
+        </tr>
+        <tr>
+            <td colspan="2">2행 1열 + 2행 2열</td>
+        </tr>
+    </table>
+    <!--
+        5. 열을 묶어주는 태그
+        <colgroup></colgroup>
+        - 열그룹의 시작을 알리는 태그
+
+        <col />
+        - 하나의 열 태그에 속성을 부여
+
+        ※ CSS로 스타일 부여가 가능하기 때문에 자주 사용하지 않는다.
+    -->
+    <table border="1">
+        <caption>
+            게시판
+        </caption>
+        <colgroup>
+            <col style="width: 80px;"/>
+            <col style="width: 500px;"/>
+            <col style="width: 60px;"/>
+        </colgroup>
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>조회수</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2</td>
+                <td>9월인데 너무 덥다.</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>손가락 아프다.</td>
+                <td>2</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

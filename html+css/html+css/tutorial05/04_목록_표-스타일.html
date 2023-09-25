@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04_목록_표-스타일</title>
+    <style>
+      ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      table {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+
+      td,
+      th {
+        border: 1px dotted black;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+      1. list-style
+      목록의 불릿 모양, 번호 스타일을 지정
+      reset을 통해 none으로 하여 작업
+
+      표 스타일
+      1. border
+      테두리를 만든다.
+
+      2. border-collapse
+      테투리를 이쁘게 표현하기 위해 합쳐서 표기한다.
+
+    -->
+    <ul>
+      <li>사과</li>
+      <li>딸기</li>
+      <li>바나나</li>
+    </ul>
+    <br />
+    <table>
+      <tr>
+        <th>메뉴명</th>
+        <th>가격</th>
+      </tr>
+      <tr>
+        <td>제육볶음</td>
+        <td>8,000</td>
+      </tr>
+      <tr>
+        <td>돈까스</td>
+        <td>9,000</td>
+      </tr>
+    </table>
+  </body>
+</html>

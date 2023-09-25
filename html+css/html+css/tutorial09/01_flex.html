@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column-reverse;
+        border: 1px solid red;
+      }
+
+      .container > div {
+        width: 200px;
+        background: black;
+        color: #ffffff;
+        text-align: center;
+      }
+
+      .container2 {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        border: 1px solid red;
+      }
+
+      .container2 > div {
+        width: 500px;
+        background: black;
+        color: #ffffff;
+        text-align: center;
+      }
+
+      .container3 {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid red;
+        height: 600px;
+      }
+
+      .container3 > div {
+        width: 200px;
+        height: 200px;
+        background: black;
+        color: #ffffff;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+      flex box layout
+      요소의 자유로운 배치를 위해 사용하는 속성
+
+      부모 요소에 flex임을 알려준다.
+      { display: flex | inline-flex }
+
+      - flex는 높이의 기본값이 부모에 의해 정해진다.
+
+      부모가 flex 요소인경우 사용할수 있는 속성들
+      1. flex-direction
+      방향을 지정한다.
+
+      { flex-direction: row | row-reverse | column | column-reverse }
+      [기본값] row: 주축을 가로로 지정하고 왼쪽에서 오른쪽으로 배치
+      row-reverse: 주축을 가로로 지정하고 오른쪽에서 왼쪽으로 배치
+
+      column: 주축을 세로로 지정하고 위쪽에서 아래쪽으로 배치
+      column-reverse: 주축을 세로로 지정하고 아래쪽에서 위쪽으로 배치
+
+      2. flex-wrap
+      flex 컨테이너 가로길이보다 더 많은 항목이 있는 경우 줄바꿈을 할건지 여부를 지정한다.
+
+      { flex-wrap: nowrap | wrap | wrap-reverse }
+
+      [기본값] nowrap: 한줄에 표한현다.
+      wrap: 여러줄에 표현한다.
+      wrap-reverse: 여러줄에 시작과 끝점이 바뀌어 표현한다.
+
+      3. justify-content / aligin-items
+      가로축, 세로축 정렬
+
+      가로축 정렬
+      { justify-content: flex-start | flex-end | center | space-between }
+      
+      [기본값] flex-start: 오른쪽
+      flex-end: 왼족
+      center: 가운데
+      space-between: 첫번째와 마지막에 배치하고 나머지는 사이 같은 간격으로 정렬
+
+      세로축 정렬
+      { aligin-items: flex-start | flex-end | center }
+
+      [기본값] flex-start: 오른쪽
+      flex-end: 왼족
+      center: 가운데
+
+
+    -->
+    <div class="container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+
+    <div class="container2">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+    </div>
+
+    <div class="container3">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+    </div>
+  </body>
+</html>

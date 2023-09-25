@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>07_폼-LV3</title>
+</head>
+<body>
+    <h1>프론트엔드 개발자 지원서</h1>
+    <p>HTML과 CSS에 대한 이해도가 있는 분을 찾습니다!</p>
+    <hr/>
+    <form>
+        <b>개인정보</b>
+        <br/>
+        이름 <input name="name" type="text" placeholder="필수입력항목" required>
+        <br/>
+        연락처 <input name="phone" type="text" placeholder="필수입력항목" required>
+        <br/>
+        <br/>
+        <b>지원분야 (part)</b>
+        <br/>
+        <input name="part" type="radio" checked/> 웹 퍼블리싱
+        <br/>
+        <input name="part" type="radio" /> 자바스크립트 개발
+        <br/>
+        <input name="part" type="radio" /> 환경 개선
+        <br/>
+        <br/>
+        <b>지원동기</b>
+        <br/>
+        <textarea rows="5" cols="100" placeholder="본사 지원동기를 간략하게 입력해주세요."></textarea>
+        <br/>
+        <button type="submit">접수 하기</button>
+        <button type="reset">다시 하기</button>
+    </form>
+</body>
+</html>
