@@ -1,4 +1,5 @@
 # Flask vs Django
+
 - 몇가지의 기능은 Flask 방대한 기능은 Django
 - IDE : Pycharm, atom, Vscode, sublinetext... 많다
 - Anaconda : 포함(python), numpy, pandas, matplotlib...
