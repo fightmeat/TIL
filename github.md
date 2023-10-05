@@ -1,0 +1,2 @@
+- 알잘딱 깃허브 가이드
+- https://bit.ly/3vErAt7
