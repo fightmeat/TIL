@@ -1,1 +1,1 @@
-## [이승훈] [오후 7:35] https://dacon.io/myprofile/428400/codeshare
+## https://dacon.io/myprofile/428400/codeshare
