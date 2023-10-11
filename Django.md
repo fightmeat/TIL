@@ -46,7 +46,7 @@ View : MVC의 Controller 역할
      * python manage.py startapp address
      * address/models.py
      * 주소록을 관리할 테이블을  클래스로 정의하는 파일
-     * 테이블을 새로 만ㄴ들려면 models.py와 admin.py 2개의 파일 수정
+     * 테이블을 새로 만들려면 models.py와 admin.py 2개의 파일 수정
      * ORM(오브젝트 릴레이션 매핑)기법을 사용 : 테이블을 클래스로 관리하는 작업
      * 하나의 테이블은 하나의 클래스로 정의하고
      * 테이블의 컬럼은 클래스의 변수로 매핑하고
