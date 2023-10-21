@@ -19,3 +19,19 @@
 3. 자료형
 - src에 new package를 chap_01을 만들고 _01_HelloWorld 생성
 - chap_01에 new javaclass로 _02_DataTypes 생성
+- public static void main(String[] args)을 입력하기 위해서는 psvm 또는 main 입력가능
+- System.out.println(); 대신에 sout 사용가능
+  
+```java
+package chap_01;
+
+public class _02_DataTypes {
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+        System.out.println("안녕하세요?");
+        System.out.println(12);
+        System.out.println(-34);
+        System.out.println(3.14);
+    }
+}
+``` 
